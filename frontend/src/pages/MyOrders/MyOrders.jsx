@@ -10,7 +10,7 @@ const MyOrders = () => {
   const {url,token} = useContext(StoreContext);
 
   const fetchOrders = async () => {
-    const response = await axios.post(url+"/api/order/userorders",{},{headers:{token}});
+    const response = await axios.post(url+"https://foodie-app-10.onrender.com",{},{headers:{token}});
     setData(response.data.data)
   }
 
