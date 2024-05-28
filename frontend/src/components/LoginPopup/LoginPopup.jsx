@@ -27,10 +27,10 @@ const LoginPopup = ({ setShowLogin }) => {
 
         let new_url = url;
         if (currState === "Login") {
-            new_url += "https://foodie-app-10.onrender.com";
+            new_url += "https://foodie-app-10.onrender.com/api/user/login";
         }
         else {
-            new_url += "https://foodie-app-10.onrender.com"
+            new_url += "https://foodie-app-10.onrender.com/api/user/register"
         }
         const response = await axios.post(new_url, data);
         if (response.data.success) {
